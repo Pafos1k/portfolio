@@ -1,0 +1,13 @@
+/* Keep the exported layout and motion transforms intact. */
+.framer-cUIgM .framer-gyd7ij { translate: 0 20px; }
+/* Replace the header logo only; its existing box remains unchanged. */
+.framer-ca1k8a-container .framer-nagdz8 img { content: url("./vlad-logo.svg"); }
+/* Framer may reinsert its platform badge after hydration. */
+#__framer-badge-container { display: none !important; }
+
+/* Preserve the new photo's proportions inside the existing portrait box. */
+.framer-gyd7ij img { object-fit: cover !important; }
+.framer-gyd7ij [data-framer-background-image-wrapper] {
+  -webkit-mask: url("./vlad-portrait-mask.svg") center / cover no-repeat;
+  mask: url("./vlad-portrait-mask.svg") center / cover no-repeat;
+}
